@@ -54,17 +54,20 @@ While fork copies all of the attributes we mentioned above, imagine if everythin
 
 [gimmick:yuml (type: 'class', style: 'plain')]([ProcessID|Memory|Files]-[ThreadID 1|Registers|Kernel State],[ProcessID|Memory|Files]-[ThreadID 2|Registers|Kernel State])
 
-This hybrid child is called a thread. Threads have a number of advantages over where you might use fork
-Separate processes can not see each others memory. They can only communicate with each other via other system calls.
-Threads however, share the same memory. So you have the advantage of multiple processes, with the expense of having to use system calls to communicate between them.
+**This hybrid child is called a thread.** Threads have a number of advantages over where you might use fork.
 
-The problem that this raises is that threads can very easily step on each others toes. One thread might increment a variable, and another may decrease it without informing the first thread. These type of problems are called concurrency problems and they are many and varied.
+* Separate processes can not see each others memory. They can only communicate with each other via other system calls.
 
-To help with this, there are userspace libraries that help programmers work with threads properly. The most common one is called POSIX threads or, as it more commonly referred to pthreads.
+    Threads however, share the same memory. So you have the advantage of multiple processes, with the expense of having to use system calls to communicate between them.
 
-Switching processes is quite expensive, and one of the major expenses is keeping track of what memory each process is using. By sharing the memory this overhead is avoided and performance can be significantly increased.
+    The problem that this raises is that threads can very easily step on each others toes. One thread might increment a variable, and another may decrease it without informing the first thread. These type of problems are called concurrency problems and they are many and varied.
+
+    To help with this, there are userspace libraries that help programmers work with threads properly. The most common one is called POSIX threads or, as it more commonly referred to pthreads
+
+* Switching processes is quite expensive, and one of the major expenses is keeping track of what memory each process is using. By sharing the memory this overhead is avoided and performance can be significantly increased.
 
 There are many different ways to implement threads. On the one hand, a userspace implementation could implement threads within a process without the kernel having any idea about it. The threads all look like they are running in a single process to the kernel.
+
 This is suboptimal mainly because the kernel is being withheld information about what is running in the system. It is the kernels job to make sure that the system resources are utilised in the best way possible, and if what the kernel thinks is a single process is actually running multiple threads it may make suboptimal decisions.
 
 Thus the other method is that the kernel has full knowledge of the thread. Under Linux, this is established by making all processes able to share resources via the clone system call. Each thread still has associated kernel resources, so the kernel can take it into account when doing resource allocations.
@@ -78,6 +81,7 @@ One optimisation is called copy on write. This means that similar to threads abo
 
 However, when a process writes to it's memory, it needs to be a private copy that is not shared. As the name suggests, copy on write optimises this by only doing the actual copy of the memory at the point when it is written to.
 Copy on write also has a big advantage for exec. Since exec will simply be overwriting all the memory with the new program, actually copying the memory would waste a lot of time. Copy on write saves us actually doing the copy.
+
 ### The init process
 
 We discussed the overall goal of the init process previously, and we are now in a position to understand how it works.
@@ -90,7 +94,8 @@ However, this exit code is part of the process which has just called exit. So th
 A process stays as a zombie until the parent collects the return code with the wait call. However, if the parent exits before collecting this return code, the zombie process is still around, waiting aimlessly to give it's status to someone.
 
 In this case, the zombie child will be reparented to the init process which has a special handler that reaps the return value. Thus the process is finally free and can the descriptor can be removed from the kernels process table.
-Zombie example
+
+###Zombie example
 
 ```cpp
 #include <stdio.h>
@@ -126,6 +131,7 @@ ianw@lime:~$ ps ax | grep [z]ombie
 ```
 
 Above we create a zombie process. The parent process will sleep forever, whilst the child will exit after a few seconds.
+
 Below the code you can see the results of running the program. The parent process (16168) is in state S for sleep (as we expect) and the child is in state Z for zombie. The ps output also tells us that the process is defunct in the process description.
 
 ## /proc/ (procfs)
