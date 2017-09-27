@@ -12,9 +12,11 @@
   * [Kernel Namespaces](linux/concepts/kernel_namespaces.md)
   * [Processes](linux/concepts/processes.md)
   * [Stack vs Heap](linux/concepts/stack_vs_heap.md)
-  ----
-  * # Performance Testing
-  * [Network](linux/performance_testing/network.md)
+
+[SRE]()
+
+  * # Destructive Testing
+  * [Simulate Network Failure](sre/destructive_testing/simulate_network_failure.md)
 
 [SCM]()
 

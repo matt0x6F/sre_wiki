@@ -1,6 +1,7 @@
-## Flood a connection
-_Must be executed as root_
-`ping -f <target> `
+Simulating Network Failure
+======
+
+The idea here is to simulate a struggling network connection. This is useful in destructive testing mostly. You want to observe *how* the application fails, or as I like to say, "Determining what failure looks like."
 
 ## Drop n% of Incoming/Outgoing Packets (Packet Loss Simulation)
 `iptables -A INPUT -m statistic --mode random --probability 0.1 -j DROP `
