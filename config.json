@@ -1,7 +1,6 @@
 {
     "useSideMenu": true,
     "lineBreaks": "gfm",
-    "additionalFooterText": "",
-    "anchorCharacter": "&#x2693;",
+    "additionalFooterText": "<a href=https://github.com/mattouille/sre_wiki>Make content PR's here</a><br />",
     "title": "SRE Wiki"
 }
