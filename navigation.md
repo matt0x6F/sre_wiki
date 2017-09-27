@@ -17,6 +17,9 @@
 
   * # Destructive Testing
   * [Simulate Network Failure](sre/destructive_testing/simulate_network_failure.md)
+  ----
+  * # Performance Testing
+  * [Microservices](sre/performance_testing/microservices.md)
 
 [SCM]()
 
