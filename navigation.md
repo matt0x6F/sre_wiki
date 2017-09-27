@@ -16,6 +16,8 @@
 [SRE]()
 
   * # Destructive Testing
+  * [Simulate CPU](sre/destructive_testing/simulate_cpu.md)
+  * [Simulate Disk](sre/destructive_testing/simulate_disk.md)
   * [Simulate Network Failure](sre/destructive_testing/simulate_network_failure.md)
   ----
   * # Performance Testing
