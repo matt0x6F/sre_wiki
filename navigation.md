@@ -15,7 +15,7 @@
 
 [SRE]()
 
-  * [Intro](sre.md)
+  * [Intro](intro.md)
   * # Destructive Testing
   * [Simulate CPU](sre/destructive_testing/simulate_cpu.md)
   * [Simulate Disk](sre/destructive_testing/simulate_disk.md)
