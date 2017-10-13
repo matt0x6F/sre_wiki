@@ -4,6 +4,7 @@
 [Linux]()
 
   * # Applications
+  * [Bash / Bourne Shell](linux/applications/shells.md)
   * [Cron](linux/applications/cron.md)
   * [SSH](linux/applications/ssh.md)
   * [GPG](linux/applications/gpg.md)
@@ -16,11 +17,25 @@
   * [Control Groups (cgroups)](linux/concepts/control_groups.md)
   * [Debian Packages](linux/concepts/deb_packages.md)
   * [Date & Time](linux/concepts/datetime.md)
+  * [Exit Codes](linux/concepts/exit_codes.md)
   * [Kernel Namespaces](linux/concepts/kernel_namespaces.md)
   * [Processes](linux/concepts/processes.md)
   * [RPM Packages](linux/concepts/rpm_packages.md)
   * [Stack vs Heap](linux/concepts/stack_vs_heap.md)
   * [Troubleshooting Crashed Apps](linux/concepts/troubleshooting_crashed_apps.md)
+
+[Cloud]()
+
+  * # Storage
+  * [Object Storage](cloud/storage/object.md)
+  * [Object vs. Block Storage](cloud/storage/object_vs_block.md)
+
+[AWS]()
+
+  * # S3
+  * [Buckets General]()
+  * [Bucket Policy](aws/s3/bucket_policy.md)
+
 
 [SRE]()
 
