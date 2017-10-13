@@ -129,3 +129,5 @@ Once you have written a Pipeline script, check it against the [article on Top 10
 * [Running a JMeter Test via Jenkins Pipeline](https://www.blazemeter.com/blog/running-jmeter-test-jenkins-pipeline)
 * [Continuous integration for Android with Jenkins, Docker and AWS](http://flyingtophat.co.uk/blog/2016/07/07/continuous-integration-for-android-with-jenkins-docker-and-aws.html)
 * [Jenkins 2.0 and Multi-branch pipeline builds for iOS apps with Fastlane](https://www.quernus.co.uk/2016/04/27/jenkins-2.0-multi-branch-pipeline-ios-fastlane-builds/)
+
+Source: http://www.stuartellis.name/articles/jenkins-pipeline/
