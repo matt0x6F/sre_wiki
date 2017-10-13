@@ -57,6 +57,6 @@ Below is an example of a well balanced policy.
 }
 ```
 
-In the first policy I'm allowing anything in my account to utilize `s3:PutObject`. Note the `/*`, this indicates that you can use this function on the bucket and it's folders. I also specify that anything utilizing PutObject must use a KMS key (So everything in the bucket is encrypted).
+In the first policy I'm allowing anything in my account to utilize _s3:PutObject_. Note the _/*_, this indicates that you can use this function on the bucket and it's folders. I also specify that anything utilizing PutObject must use a KMS key (So everything in the bucket is encrypted).
 
-The second policy allows anyone using a specific role to utilize `s3:GetObject` and `s3:DeleteObject`. This role is part of an `STS:AssumeRole` trust policy. The third policy is much of the same.
+The second policy allows anyone using a specific role to utilize _s3:GetObject_ and _s3:DeleteObject_. This role is part of an _STS:AssumeRole_ trust policy. The third policy is much of the same, however note the lack of the use of _/*_ at the end of the resource. That's because _s3:ListBucket_ applies to the _bucket_ while the former permissions apply to _objects_.
