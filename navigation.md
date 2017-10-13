@@ -8,7 +8,6 @@
   * [Cron](linux/applications/cron.md)
   * [SSH](linux/applications/ssh.md)
   * [GPG](linux/applications/gpg.md)
-  * [Java and the JVM](linux/applications/java_and_jvm.md)
   ----
   * # Networking
   * [TCP](linux/networking/tcp.md)
@@ -21,7 +20,6 @@
   * [Kernel Namespaces](linux/concepts/kernel_namespaces.md)
   * [Processes](linux/concepts/processes.md)
   * [RPM Packages](linux/concepts/rpm_packages.md)
-  * [Stack vs Heap](linux/concepts/stack_vs_heap.md)
   * [Troubleshooting Crashed Apps](linux/concepts/troubleshooting_crashed_apps.md)
 
 [Cloud]()
@@ -68,6 +66,9 @@
   * # Ruby
   * [Rake](languages/ruby/rake.md)
   ---
+  * # Java
+  * [Stack vs Heap](languages/java/stack_vs_heap.md)
+  * [Java and the JVM](languages/java/java_and_jvm.md)
 
 [Links](links.md)
 - - - -
