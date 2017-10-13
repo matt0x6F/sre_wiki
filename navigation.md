@@ -52,10 +52,16 @@
   ---
   * # Performance Testing
   * [Microservices](sre/performance_testing/microservices.md)
+  ---
 
-[SCM]()
 
-  * [Git](scm/git.md)
+[Applications]()
+
+  * # SCM
+  * [Git](applications/scm/git.md)
+  ---
+  * # CICD - Jenkins
+  * [Pipelines with Docker](applications/cicd/jenkins-pipeline-with-docker.md)
 
 [Languages]()
 
@@ -66,3 +72,5 @@
 [Links](links.md)
 - - - -
 [gimmick:ThemeChooser](Change theme)
+- - - -
+[gimmick:ForkMeOnGitHub (color: 'white')](https://github.com/mattouille/sre_wiki#fork-destination-box)
